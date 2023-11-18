@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <title>Landing_Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+:root{
+    --primary-color: hsl(208, 46%, 57%);
+    --primary-color-dark: #5681a7;
+    --secondary-color: #e8f1fa;
+    --text-dark: #282d31;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --max-width: 1200px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.section-container{
+    padding: 5rem 1rem;
+    max-width: var(--max-width);
+    margin: auto;
+}
+.section-title{
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(184, 59, 59);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.section-subtitle{
+    font-size: 1rem;
+    font-style:italic;
+    color: rgb(197, 52, 72);
+    margin-bottom: 5rem;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+nav{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-logo a{
+    text-decoration: none;
+    color: rgb(62, 44, 231);
+    font-size: 30px;
+    text-decoration:underline rgb(107, 107, 197);
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+.link{
+    color: rgb(15, 15, 15);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.link:hover{
+    color: rgb(248, 125, 10);
+}
+header{
+    height: 100vh;
+    background-image: url(bg-2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+header .section-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: rgb(226, 17, 17);
+}
+.header-content h1{
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 5rem;
+    color: rgb(112, 70, 226);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header-content p{
+    text-align: center;
+    font-weight: 300;
+    color: rgb(0, 0, 0);  
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+.header-content button{
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(15, 50, 248);
+    color: rgb(245, 241, 241);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+    display: block;
+    margin: 0 auto;
+}
+.header-content button:hover{
+    background-color: rgb(78, 78, 194);
+}
+.journey-container{
+    background-color: rgb(204, 214, 218);
+}
+.journey-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.country-card{
+    background-color: rgb(183, 184, 231);
+}
+.country-name{
+    padding: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: rgb(27, 24, 24);
+    cursor: pointer;
+}
+.country-name i{
+    font-size: 1.2rem;
+}
+.country-name span{
+    font-style: italic;
+}
+
+footer{
+    background-color: rgb(54, 58, 39);
+    color: rgb(241, 236, 236);
+}
+footer .section-container{
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+}
+footer h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.social-icons i{
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+footer p{
+    font-style: italic;
+}
+@media (max-width: 640px){
+    .nav-links{
+        display: none;
+    }
+    header .section-container{
+        justify-content: flex-start;
+    }
+    .header-content{
+        max-width: 400px;
+        align-items: flex-start;
+    }
+    .header-content p{
+        text-align: left;
+    }
+    .header-content button{
+        float: left;
+    }
+    .journey-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}    
+</style>
+<body>
+    <header>
+        <div class="section-container">
+            <div class="header-content">
+                <h1 class="section-title">Travel</h1>
+                <p class="section-subtitle">Travel is the act of moving from one place to another, typically for leisure, exploration, business, or personal reasons. It encompasses various modes of transportation, such as air travel, road trips, train journeys, cruises, and more. People travel to experience new cultures, landscapes, cuisines, and to broaden their perspectives.</p>
+                <button>Read more</button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-logo"><a href="#">Travel.com</a></div>
+            <ul class="nav-links">
+                <li class="link">Home</li>
+                <li class="link">Blog</li>
+                <li class="link">Offers</li>
+                <li class="link">Service</li>
+                <li class="link">Contact</li>
+            </ul>
+    </nav>
+    <section class="journey-container">
+        <div class="section-container">
+            <h2 class="section-title">Start Your Journey</h2>
+            <p class="section-subtitle">
+                The Most Searched Places
+            </p>
+            <div class="journey-grid">
+                <div class="country-card">
+                    <img src="country-1.jpg" alt="country">
+                    <div class="country-name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>
+                            Delhi Gate, India
+                        </span>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <img src="country-2.jpg" alt="country">
+                    <div class="country-name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>
+                            Raigad Fort, India
+                        </span>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <img src="country-3.jpg" alt="country">
+                    <div class="country-name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>
+                            Venezia, Italy 
+                        </span>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <img src="country-4.jpg" alt="country">
+                    <div class="country-name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>
+                            Eiffel Tower, France
+                        </span>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <img src="country-5.jpg" alt="country">
+                    <div class="country-name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>
+                            Burj Khalifa, Dubai
+                        </span>
+                    </div>
+                </div>
+                <div class="country-card">
+                    <img src="country-6.jpg" alt="country">
+                    <div class="country-name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>
+                            Phi Phi Island, Thailand
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="section-container">
+            <h4>Travel.com</h4>
+            <div class="social-icons">
+                <span><i class="ri-facebook-fill"></i></span>
+                <span><i class="ri-twitter-fill"></i></span>
+                <span><i class="ri-instagram-line"></i></span>
+                <span><i class="ri-linkedin-fill"></i></span>
+            </div>
+            <p>"Travel opens the gateway to a world of captivating experiences, where every journey becomes a narrative woven<br> with cultural tapestries and scenic wonders"
+            </p>
+        </div>
+      </footer>
+</body>
+</html>
